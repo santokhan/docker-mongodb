@@ -1,7 +1,8 @@
 from pymongo import MongoClient
 
-MONGO_URI = "mongodb://localhost:27018/royaldrie"
-# MONGO_URI = "mongodb://localhost:27019/royaldrie"
+port = input("MongoDB port: ")
+
+MONGO_URI = f"mongodb://localhost:{port}/royaldrie"
 
 
 def connection():
