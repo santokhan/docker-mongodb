@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mongo:
+    container_name: mongodb
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 27018:27017
+    volumes:
+      - ./mongodb-data:/data/db
+      
+volumes:
+  mongodb-data:
